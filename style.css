@@ -1,0 +1,50 @@
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/banner.jpeg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+  }
+
+.a1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+  }
+
+p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+  }
+
+h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+  }
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  .wrapper
+  {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+  }
+
