@@ -1,11 +1,9 @@
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/banner.jpeg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./images/banner.png');
     background-size: cover;
     background-position: center;
     position: relative;
-    height: 100%;
-    transform-style: preserve-3d;
-    z-index: -1;
+    
 }
 
 a {
@@ -40,11 +38,101 @@ h4 {
     text-decoration: underline;
   }
 
-  .wrapper
+  figcaption
   {
-    height: 100vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-    perspective: 10px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
   }
 
+  .figcaptionbold
+  {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+  }
+  .carousel-item {
+    height: 300px;
+  }
+  
+  .carousel-item img {
+    max-height: 300px;
+    object-fit: cover;
+    width: 30%;
+  }
+  .intro-text {
+    width: 50%;
+    float: left;
+  }
+  
+
+  img
+  {
+    fill: 100%;
+    height: auto;
+  }
+  
+  .caption
+  {
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-size: small;
+  }
+
+  /* CSS */
+.steps {
+  display: inline-block;
+  text-align: center;
+  margin: 0 10px;
+  position: relative;
+  left: -100%; /* move the images offscreen initially */
+  opacity: 0; /* set initial opacity to 0 */
+}
+
+
+
+@keyframes slide-in {
+  from {
+    left: -100%; /* start offscreen to the left */
+  }
+  to {
+    left: 0; /* slide in to the center */
+    opacity: 1; /* set final opacity to 1 */
+
+  }
+
+}
+
+@keyframes slide-out {
+    from {
+      left: 0; /* start offscreen to the left */
+    }
+    to {
+      left: -100%; /* slide in to the center */
+      opacity: 0; /* set final opacity to 1 */
+  
+    }
+  }
+
+.steps.animate {
+  left: 0; /* move the images to the center */
+  opacity: 1; /* set final opacity to 1 */
+}
+
+.steps:nth-child(5) {
+  animation-delay: 2s; /* delay the animation of imageFive by .2s */
+}
+
+.steps:nth-child(4) {
+  animation-delay: 2.5s; /* delay the animation of imageFour by .4s */
+}
+
+.steps:nth-child(3) {
+  animation-delay: 3s; /* delay the animation of imageThree by .6s */
+}
+
+.steps:nth-child(2) {
+  animation-delay: 3.5s; /* delay the animation of imageTwo by .8s */
+}
+
+.steps:nth-child(1) {
+  animation-delay: 4s; /* delay the animation of imageOne by 1s */
+}
